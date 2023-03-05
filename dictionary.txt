@@ -1,0 +1,364 @@
+--- directory_dict
+unitid	Unique identification number of the institution
+instnm	Institution (entity) name
+ialias	Institution name alias
+addr	Street address or post office box
+city	City location of institution
+stabbr	State abbreviation
+zip	ZIP code
+fips	FIPS state code
+obereg	Bureau of Economic Analysis (BEA) regions
+chfnm	Name of chief administrator
+chftitle	Title of chief administrator
+gentele	General information telephone number
+ein	Employer Identification Number
+duns	Dun and Bradstreet numbers
+opeid	Office of Postsecondary Education (OPE) ID Number
+opeflag	OPE Title IV eligibility indicator code
+webaddr	Institution's internet website address
+adminurl	Admissions office web address
+faidurl	Financial aid office web address
+applurl	Online application web address
+npricurl	Net price calculator web address
+veturl	Veterans and Military Servicemembers tuition policies web address
+athurl	Student-Right-to-Know student athlete graduation rate web address
+disaurl	Disability Services Web Address
+sector	Sector of institution
+iclevel	Level of institution
+control	Control of institution
+hloffer	Highest level of offering
+ugoffer	Undergraduate offering
+groffer	Graduate offering
+hdegofr1	Highest degree offered
+deggrant	Degree-granting status
+hbcu	Historically Black College or University
+hospital	Institution has hospital
+medical	Institution grants a medical degree
+tribal	Tribal college
+locale	Degree of urbanization (Urban-centric locale)
+openpubl	Institution open to the general public
+act	Status of institution
+newid	UNITID for merged schools
+deathyr	Year institution was deleted from IPEDS
+closedat	Date institution closed
+cyactive	Institution is active in current year
+postsec	Primarily postsecondary indicator
+pseflag	Postsecondary institution indicator
+pset4flg	Postsecondary and Title IV institution indicator
+rptmth	Reporting method for student charges, graduation rates, retention rates and student financial aid
+instcat	Institutional category
+c21basic	Carnegie Classification 2021: Basic
+c21ipug	Carnegie Classification 2021: Undergraduate Instructional Program
+c21ipgrd	Carnegie Classification 2021: Graduate Instructional Program
+c21ugprf	Carnegie Classification 2021: Undergraduate Profile
+c21enprf	Carnegie Classification 2021: Enrollment Profile
+c21szset	Carnegie Classification 2021: Size and Setting
+c18basic	Carnegie Classification 2018: Basic
+c15basic	Carnegie Classification 2015: Basic
+ccbasic	Carnegie Classification 2005/2010: Basic
+carnegie	Carnegie Classification 2000
+landgrnt	Land Grant Institution
+instsize	Institution size category
+f1systyp	Multi-institution or multi-campus organization
+f1sysnam	Name of multi-institution or multi-campus organization
+f1syscod	Identification number of multi-institution or multi-campus organization
+cbsa	Core Based Statistical Area (CBSA)
+cbsatype	CBSA Type Metropolitan or Micropolitan
+csa	Combined Statistical Area (CSA)
+necta	New England City and Town Area (NECTA)
+countycd	Fips County code
+countynm	County name
+cngdstcd	State and 114TH Congressional District ID
+longitud	Longitude location of institution
+latitude	Latitude location of institution
+dfrcgid	Data Feedback Report comparison group created by NCES
+dfrcuscg	Data Feedback Report - Institution submitted a custom comparison group
+
+--- offering_dict
+unitid	Unique identification number of the institution
+peo1istr	Occupational
+peo2istr	Academic
+peo3istr	Continuing professional
+peo4istr	Recreational or avocational
+peo5istr	Adult basic remedial or high school equivalent
+peo6istr	Secondary (high school)
+cntlaffi	Institutional control or affiliation
+pubprime	Primary public control
+pubsecon	Secondary public control
+relaffil	Religious affiliation
+level1	Certificate of less than 1 year
+level1a	Certificate of less than 12 weeks
+level1b	Certificate of at least 12 weeks, but less than 1 year
+level2	Certifiicate of at least 1 year, but less than 2 years
+level3	Associate's degree
+level4	Certificate of at least 2 years, but less than 4 years
+level5	Bachelor's degree
+level6	Postbaccalaureate certificate
+level7	Master's degree
+level8	Post-master's certificate
+level12	Other degree
+level17	Doctor's degree - research/scholarship
+level18	Doctor's degree - professional practice
+level19	Doctor's degree - other
+calsys	Calendar system
+ft_ug	Full-time undergraduate students are enrolled
+ft_ftug	Full time first-time degree/certificate-seeking undergraduate students enrolled
+ftgdnidp	Full-time graduate (not including doctor's professional practice) students are enrolled
+pt_ug	Part-time undergraduate students are enrolled
+pt_ftug	Part time first-time degree/certificate-seeking undergraduate students enrolled
+ptgdnidp	Part-time graduate (not including doctor's professional practice) students are enrolled
+docpp	Doctor's professional practice students are enrolled
+docppsp	Doctor's professional practice students are enrolled in programs formerly designated as first-professional
+openadmp	Open admission policy
+vet1	Yellow Ribbon Program (officially known as Post-9/11 GI Bill, Yellow Ribbon Program)
+vet2	Credit for military training
+vet3	Dedicated point of contact for support services for veterans, military servicemembers, and their families
+vet4	Recognized student veteran organization
+vet5	Member of Servicemembers Opportunity Colleges
+vet9	Services  and programs are not available to veterans, military servicemembers, or their families?
+credits1	Dual enrollment
+credits2	Credit for life experiences
+credits3	Advanced placement (AP) credits
+credits4	Institution does not accept dual, credit for life, or AP credits
+slo5	ROTC
+slo51	ROTC - Army
+slo52	ROTC - Navy
+slo53	ROTC - Air Force
+slo6	Study abroad
+slo7	Weekend/evening  college
+slo8	Teacher certification (below the postsecondary level)
+slo81	Teacher certification: Students can complete their preparation in certain areas of specialization
+slo82	Teacher certification: Students must complete their preparation at another institution for certain areas of specialization
+slo83	Teacher certification: Approved by the state for initial certifcation or licensure of teachers.
+slo9	None of the above special learning opportunities are offered
+yrscoll	Years of college-level work required
+stusrv1	Remedial services
+stusrv2	Academic/career counseling service
+stusrv3	Employment services for students
+stusrv4	Placement services for completers
+stusrv8	On-campus day care for students' children
+stusrv9	None of the above selected services are offered
+libres1	Library resources/services: Physical facilities
+libres2	Library resources/services: Organized collection of printed materials
+libres3	Library resources/services: Access to digital/electronic resources
+libres4	Library resources/services: Staff trained to provide and interpret library materials
+libres5	Library resources/services: Established library hours
+libres6	Library resources/services: Access to library collections that are shared with other institutions
+libres9	Library resources/services not provided
+tuitpl	Any alternative tuition plans offered by institution
+tuitpl1	Tuition guaranteed plan
+tuitpl2	Prepaid tuition plan
+tuitpl3	Tuition payment plan
+tuitpl4	Other alternative tuition plan
+dstnugc	Undergraduate level distance education courses offered
+dstnugp	Undergraduate level distance education programs offered
+dstnugn	Undergraduate level distance education not offered
+dstngc	Graduate level distance education courses offered
+dstngp	Graduate level distance education programs offered
+dstngn	Graduate level distance education not offered
+distcrs	Distance education courses offered
+distpgs	Distance education programs offered
+dstnced1	Undergraduate level programs or courses are offered via distance education
+dstnced2	Graduate level programs or courses are offered via distance education
+dstnced3	Does not offer distance education opportunities
+distnced	All programs offered completely via distance education
+disab	Percent indicator of undergraduates formally registered as students with disabilities
+disabpct	Percent of undergraduates, who are formally registered as students with disabilities, when percentage is more than 3 percent
+alloncam	Full-time, first-time degree/certificate-seeking students required to live on campus
+tuitvary	Tuition charge varies for in-district, in-state, out-of-state students
+room	Institution provide on-campus housing
+roomcap	Total dormitory capacity
+board	Institution provides board or meal plan
+mealswk	Number of meals per week in board charge
+roomamt	Typical room charge for academic year
+boardamt	Typical board charge for academic year
+rmbrdamt	Combined charge for room and board
+applfeeu	Undergraduate application fee
+applfeeg	Graduate application fee
+athassoc	Member of National Athletic Association
+assoc1	Member of National Collegiate Athletic Association (NCAA)
+assoc2	Member of National Association of Intercollegiate Athletics (NAIA)
+assoc3	Member of National Junior College Athletic  Association (NJCAA)
+assoc4	Member of National Small College Athletic Association (NSCAA)
+assoc5	Member of National Christian College Athletic Association (NCCAA)
+assoc6	Member of other national athletic association not listed above
+sport1	NCAA/NAIA member for football
+confno1	NCAA/NAIA conference number football
+sport2	NCAA/NAIA member for basketball
+confno2	NCAA/NAIA conference number basketball
+sport3	NCAA/NAIA member for baseball
+confno3	NCAA/NAIA conference number baseball
+sport4	NCAA/NAIA member for cross country/track
+confno4	NCAA/NAIA conference number cross country/track
+
+--- completion_dict
+unitid	Unique identification number of the institution
+cipcode	CIP Code -  2020 Classification
+majornum	First or Second Major
+awlevel	Award Level code
+ctotalt	Grand total
+ctotalm	Grand total men
+ctotalw	Grand total women
+caiant	American Indian or Alaska Native total
+caianm	American Indian or Alaska Native men
+caianw	American Indian or Alaska Native women
+casiat	Asian total
+casiam	Asian men
+casiaw	Asian women
+cbkaat	Black or African American total
+cbkaam	Black or African American men
+cbkaaw	Black or African American women
+chispt	Hispanic or Latino total
+chispm	Hispanic or Latino men
+chispw	Hispanic or Latino women
+cnhpit	Native Hawaiian or Other Pacific Islander total
+cnhpim	Native Hawaiian or Other Pacific Islander men
+cnhpiw	Native Hawaiian or Other Pacific Islander women
+cwhitt	White total
+cwhitm	White men
+cwhitw	White women
+c2mort	Two or more races total
+c2morm	Two or more races men
+c2morw	Two or more races women
+cunknt	Race/ethnicity unknown total
+cunknm	Race/ethnicity unknown men
+cunknw	Race/ethnicity unknown women
+cnralt	Nonresident alien total
+cnralm	Nonresident alien men
+cnralw	Nonresident alien women
+
+--- enrollment_dict
+unitid	Unique identification number of the institution
+efalevel	Level of student
+line	Level of student (original line number on survey form)
+section	Attendance status of student
+lstudy	Level of student
+eftotlt	Grand total
+eftotlm	Grand total men
+eftotlw	Grand total women
+efaiant	American Indian or Alaska Native total
+efaianm	American Indian or Alaska Native men
+efaianw	American Indian or Alaska Native women
+efasiat	Asian total
+efasiam	Asian men
+efasiaw	Asian women
+efbkaat	Black or African American total
+efbkaam	Black or African American men
+efbkaaw	Black or African American women
+efhispt	Hispanic total
+efhispm	Hispanic men
+efhispw	Hispanic women
+efnhpit	Native Hawaiian or Other Pacific Islander total
+efnhpim	Native Hawaiian or Other Pacific Islander men
+efnhpiw	Native Hawaiian or Other Pacific Islander women
+efwhitt	White total
+efwhitm	White men
+efwhitw	White women
+ef2mort	Two or more races total
+ef2morm	Two or more races men
+ef2morw	Two or more races women
+efunknt	Race/ethnicity unknown total
+efunknm	Race/ethnicity unknown men
+efunknw	Race/ethnicity unknown women
+efnralt	Nonresident alien total
+efnralm	Nonresident alien men
+efnralw	Nonresident alien women
+
+--- class_dict
+unitid	Unique identification number of the institution
+grcohrt	Full-time first-time degree/certificate-seeking undergraduate (current year GRS cohort)
+ugentern	Total entering students at the undergraduate level, fall 2021
+pgrcohrt	Current year GRS cohort as a percent of entering class
+rrftct	Full-time fall 2020 cohort
+rrftex	Exclusions from full-time fall 2020 cohort
+rrftin	Inclusions to the full-time fall 2020 cohort
+rrftcta	Full-time adjusted fall 2020 cohort
+ret_nmf	Students from the full-time adjusted fall 2020 cohort enrolled in fall 2021
+ret_pcf	Full-time retention rate, 2021
+rrptct	Part-time fall 2020 cohort
+rrptex	Exclusions from part-time fall 2020 cohort
+rrptin	Inclusions to the part-time fall 2020 cohort
+rrptcta	Part-time adjusted fall 2020 cohort
+ret_nmp	Students from the part-time adjusted fall 2020 cohort enrolled in fall 2021
+ret_pcp	Part-time retention rate, 2021
+stufacr	Student-to-faculty ratio
+
+--- graduation_dict
+unitid	Unique identification number of the institution
+grtype	Cohort data
+chrtstat	Graduation rate status in cohort
+section	Section of survey form
+cohort	Cohort
+line	Original line number of survey form
+grtotlt	Grand total
+grtotlm	Total men
+grtotlw	Total women
+graiant	American Indian or Alaska Native total
+graianm	American Indian or Alaska Native men
+graianw	American Indian or Alaska Native women
+grasiat	Asian total
+grasiam	Asian men
+grasiaw	Asian women
+grbkaat	Black or African American total
+grbkaam	Black or African American men
+grbkaaw	Black or African American women
+grhispt	Hispanic total
+grhispm	Hispanic men
+grhispw	Hispanic women
+grnhpit	Native Hawaiian or Other Pacific Islander total
+grnhpim	Native Hawaiian or Other Pacific Islander men
+grnhpiw	Native Hawaiian or Other Pacific Islander women
+grwhitt	White total
+grwhitm	White men
+grwhitw	White women
+gr2mort	Two or more races total
+gr2morm	Two or more races men
+gr2morw	Two or more races women
+grunknt	Race/ethnicity unknown total
+grunknm	Race/ethnicity unknown men
+grunknw	Race/ethnicity unknown women
+grnralt	Nonresident alien total
+grnralm	Nonresident alien men
+grnralw	Nonresident alien women
+
+--- admission_dict
+unitid	Unique identification number of the institution
+admcon1	Secondary school GPA
+admcon2	Secondary school rank
+admcon3	Secondary school record
+admcon4	Completion of college-preparatory program
+admcon5	Recommendations
+admcon6	Formal demonstration of competencies
+admcon7	Admission test scores
+admcon8	TOEFL (Test of English as a Foreign Language
+admcon9	Other Test (Wonderlic, WISC-III, etc.)
+applcn	Applicants total
+applcnm	Applicants men
+applcnw	Applicants women
+admssn	Admissions total
+admssnm	Admissions men
+admssnw	Admissions women
+enrlt	Enrolled total
+enrlm	Enrolled  men
+enrlw	Enrolled  women
+enrlft	Enrolled full time total
+enrlftm	Enrolled full time men
+enrlftw	Enrolled full time women
+enrlpt	Enrolled part time total
+enrlptm	Enrolled part time men
+enrlptw	Enrolled part time women
+satnum	Number of first-time degree/certificate-seeking students submitting SAT scores
+satpct	Percent of first-time degree/certificate-seeking students submitting SAT scores
+actnum	Number of first-time degree/certificate-seeking students submitting ACT scores
+actpct	Percent of first-time degree/certificate-seeking students submitting ACT scores
+satvr25	SAT Evidence-Based Reading and Writing 25th percentile score
+satvr75	SAT Evidence-Based Reading and Writing 75th percentile score
+satmt25	SAT Math 25th percentile score
+satmt75	SAT Math 75th percentile score
+actcm25	ACT Composite 25th percentile score
+actcm75	ACT Composite 75th percentile score
+acten25	ACT English 25th percentile score
+acten75	ACT English 75th percentile score
+actmt25	ACT Math 25th percentile score
+actmt75	ACT Math 75th percentile score
+
