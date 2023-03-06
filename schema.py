@@ -6,47 +6,18 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 """
-IPEDS data for use by humans
+Download datasets (.csv) and data dictionaries (.xlsx) from IPEDS
 
 https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx?gotoReportId=7&fromIpeds=true&
 
-Set database connection string in environmentl default sqlite:///ipeds.db
+Create a database: any supported by SQLAlchemy.
+Set database connection string in environment; default sqlite:///ipeds.db
 
-    `export DB_CONNECTION="sqlite:///ipeds.db"`
+    export DB_CONNECTION="sqlite:///ipeds.db"
 
-Download dictionary (zipped xlsx) and data (zipped csv) files
-Run `python schema.py hd2021`
-Insert into database (any supported by SQLAlchemy).
-Make data easier to use by humans
+Run schema.py with dataset(s) to create tables and populate data
 
-  - English table names: Directory information in directory table (instead of hd2021)
-  - Lowercase column names to make them easier to read
-  - Replace numeric codes with text labels; prioritize ease of use over saving
-    cheap and abundant memory and disk space
-
-Example: hd2021 Institutional Characteristics	Directory information
-  https://nces.ed.gov/ipeds/datacenter/data/HD2021.zip
-  https://nces.ed.gov/ipeds/datacenter/data/HD2021_Dict.zip
-  
-hd2021 ic2021 c2021_a ef2021a ef2021d gr2021 adm2021 is 126M sqlite file; 19M gzipped
-
-instead of
-
-select unitid, instnm, city, stabbr, longitud, latitude, webaddr
-from directory
-where cyactive=1 and c21szset in (8, 11, 14, 17);
-
-do this
-
-select unitid, instnm, city, stabbr, longitud, latitude, webaddr
-from directory
-where cyactive='Yes' and c21szset like 'Four-year%highly residential'
-"""
-
-"""
-Run with dataset names and optional path
-
-    python schema.py hd2021 ic2021 c2021_a ef2021a ef2021d gr2021 adm2021 --path datasets
+    python -u schema.py hd2021 ic2021 c2021_a ef2021a ef2021d gr2021 adm2021 --path data
 """
 # readable names for datasets
 TABLES = {
@@ -56,7 +27,7 @@ TABLES = {
     "ef2021a": "enrollment",
     "ef2021d": "class",
     "gr2021": "graduation",
-    "adm2021": "admission"
+    "adm2021": "admission",
 }
 
 
@@ -69,7 +40,9 @@ def rename_columns(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def create_table(file_name: str, table_name: str):
-    engine = create_engine(os.environ.get("DB_CONNECTION", "sqlite:///ipeds.db"), echo=False)
+    engine = create_engine(
+        os.environ.get("DB_CONNECTION", "sqlite:///ipeds.db"), echo=False
+    )
     """
     Get variables from varlist sheet of dictionary
 
@@ -83,7 +56,9 @@ def create_table(file_name: str, table_name: str):
     codes = df[(df["DataType"] == "N") & (df["format"] == "Disc")]
     codes = codes["varname"]
     data = df[["varnumber", "varname", "varTitle"]]
-    data = data.rename(columns={"varnumber": "number", "varname": "name", "varTitle": "title"})
+    data = data.rename(
+        columns={"varnumber": "number", "varname": "name", "varTitle": "title"}
+    )
     data = data.set_index("number")
     table = f"{table_name}_dict"
     print(f"inserting {len(data.index)} rows into dictionary table {table}")
@@ -101,7 +76,14 @@ def create_table(file_name: str, table_name: str):
         print(f"\tno Frequencies sheet in {file_name}")
         df = pd.DataFrame(columns=["varnumber", "varname", "codevalue", "valuelabel"])
     values = df[["varnumber", "varname", "codevalue", "valuelabel"]]
-    values = values.rename(columns={"varnumber": "number", "varname": "name", "codevalue": "value", "valuelabel": "label"})
+    values = values.rename(
+        columns={
+            "varnumber": "number",
+            "varname": "name",
+            "codevalue": "value",
+            "valuelabel": "label",
+        }
+    )
     values["name"] = values["name"].str.lower()
     """
     data
@@ -132,7 +114,9 @@ def main(datasets: List[str], path: Optional[str]):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("datasets", nargs="+", help="dataset names, without extension (ie hd2021)")
+    parser.add_argument(
+        "datasets", nargs="+", help="dataset names, without extension (ie hd2021)"
+    )
     parser.add_argument("--path", help="path prefix for datasets", default="")
     args = parser.parse_args()
     main(args.datasets, args.path)
